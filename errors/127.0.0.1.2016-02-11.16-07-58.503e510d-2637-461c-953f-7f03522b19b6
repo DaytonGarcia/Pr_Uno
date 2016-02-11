@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S'<class \'gluon.contrib.pymysql.err.InternalError\'> (1050, u"Table \'cursos_archive\' already exists")'
+p3
+sS'layer'
+p4
+S'/home/lester/Documentos/web2py/applications/develop/controllers/default.py'
+p5
+sS'code'
+p6
+S"### required - do no delete\ndef user(): return dict(form=auth())\ndef download(): return response.download(request,db)\ndef call(): return service()\n### end requires\ndef index():\n    return dict()\n\ndef error():\n    return dict()\ndef cursos():\n   form = SQLFORM(db.cursos)\n   grid = SQLFORM.smartgrid(db.cursos,onupdate=auth.archive,formname='web2py_grid')\n   if form.process(formname='cursos').accepted:\n       response.flash = 'Se ha registrado un nuevo curso'\n   elif form.errors:\n       response.flash = 'El formulario tiene errores'\n   return dict(form=form, grid=grid)\n\n\n\nresponse._vars=response._caller(cursos)\n"
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/lester/Documentos/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/lester/Documentos/web2py/applications/develop/controllers/default.py", line 22, in <module>\n  File "/home/lester/Documentos/web2py/gluon/globals.py", line 412, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/lester/Documentos/web2py/applications/develop/controllers/default.py", line 13, in cursos\n    grid = SQLFORM.smartgrid(db.cursos,onupdate=auth.archive,formname=\'web2py_grid\')\n  File "/home/lester/Documentos/web2py/gluon/sqlhtml.py", line 3056, in smartgrid\n    user_signature=user_signature, **kwargs)\n  File "/home/lester/Documentos/web2py/gluon/sqlhtml.py", line 2319, in grid\n    next=referrer)\n  File "/home/lester/Documentos/web2py/gluon/html.py", line 2304, in process\n    self.validate(**kwargs)\n  File "/home/lester/Documentos/web2py/gluon/html.py", line 2248, in validate\n    onsuccess(self)\n  File "/home/lester/Documentos/web2py/gluon/tools.py", line 4640, in archive\n    *[field.clone(unique=False) for field in table])\n  File "/home/lester/Documentos/web2py/gluon/packages/dal/pydal/base.py", line 834, in define_table\n    table = self.lazy_define_table(tablename,*fields,**args)\n  File "/home/lester/Documentos/web2py/gluon/packages/dal/pydal/base.py", line 873, in lazy_define_table\n    polymodel=polymodel)\n  File "/home/lester/Documentos/web2py/gluon/packages/dal/pydal/adapters/base.py", line 482, in create_table\n    self.create_sequence_and_triggers(query, table)\n  File "/home/lester/Documentos/web2py/gluon/packages/dal/pydal/adapters/base.py", line 1366, in create_sequence_and_triggers\n    self.execute(query)\n  File "/home/lester/Documentos/web2py/gluon/packages/dal/pydal/adapters/base.py", line 1385, in execute\n    return self.log_execute(*a, **b)\n  File "/home/lester/Documentos/web2py/gluon/packages/dal/pydal/adapters/base.py", line 1379, in log_execute\n    ret = self.get_cursor().execute(command, *a[1:], **b)\n  File "/home/lester/Documentos/web2py/gluon/contrib/pymysql/cursors.py", line 117, in execute\n    self.errorhandler(self, exc, value)\n  File "/home/lester/Documentos/web2py/gluon/contrib/pymysql/connections.py", line 202, in defaulterrorhandler\n    raise errorclass, errorvalue\nInternalError: (1050, u"Table \'cursos_archive\' already exists")\n'
+p11
+s.

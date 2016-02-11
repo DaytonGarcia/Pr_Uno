@@ -255,3 +255,34 @@ CREATE TABLE web2py_session_Pro_Uno(
     PRIMARY KEY (id)
 ) ENGINE=InnoDB CHARACTER SET utf8;
 success!
+timestamp: 2016-02-11T16:05:32.078783
+CREATE TABLE web2py_session_develop(
+    id INT AUTO_INCREMENT NOT NULL,
+    locked CHAR(1),
+    client_ip VARCHAR(64),
+    created_datetime DATETIME,
+    modified_datetime DATETIME,
+    unique_key VARCHAR(64),
+    session_data LONGBLOB,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2016-02-11T16:08:05.070675
+CREATE TABLE cursos_archive(
+    current_record INT  , INDEX current_record__idx (current_record), FOREIGN KEY (current_record) REFERENCES cursos (id) ON DELETE CASCADE,
+    id INT AUTO_INCREMENT NOT NULL,
+    codigo INT,
+    nombre VARCHAR(512),
+    creditos INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2016-02-11T16:14:51.178058
+CREATE TABLE cursos_archive(
+    current_record INT  , INDEX current_record__idx (current_record), FOREIGN KEY (current_record) REFERENCES cursos (id) ON DELETE CASCADE,
+    id INT AUTO_INCREMENT NOT NULL,
+    codigo INT,
+    nombre VARCHAR(512),
+    creditos INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
