@@ -255,3 +255,26 @@ CREATE TABLE web2py_session_Pro_Uno(
     PRIMARY KEY (id)
 ) ENGINE=InnoDB CHARACTER SET utf8;
 success!
+timestamp: 2016-02-11T16:23:58.424690
+CREATE TABLE web2py_session_develop1(
+    id INT AUTO_INCREMENT NOT NULL,
+    locked CHAR(1),
+    client_ip VARCHAR(64),
+    created_datetime DATETIME,
+    modified_datetime DATETIME,
+    unique_key VARCHAR(64),
+    session_data LONGBLOB,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2016-02-11T16:24:29.675473
+CREATE TABLE web2py_session_developsuy(
+    id INT AUTO_INCREMENT NOT NULL,
+    locked CHAR(1),
+    client_ip VARCHAR(64),
+    created_datetime DATETIME,
+    modified_datetime DATETIME,
+    unique_key VARCHAR(64),
+    session_data LONGBLOB,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!

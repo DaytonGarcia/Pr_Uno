@@ -1,5 +1,5 @@
 from gluon.contrib.webclient import WebClient
-client = WebClient('http://127.0.0.1:8000/Proyecto_Fase_I/default/')
+client = WebClient('http://127.0.0.1:8000/developsuy/default/')
 client.get('index')
 
 # register
@@ -23,6 +23,28 @@ client.post('user/login', data=data)
 # check registration and login were successful
 client.get('user/profile')
 assert 'Welcome Homer' in client.text
+
+
+
+# Prueba unitaria Especialidad
+data1 = dict(Detalle='especialidad',
+            _formname='registro')
+client.post('especializacion', data=data1)
+#fin de prueba unitaria Especialidad
+
+
+# Prueba unitaria Catedratico
+data1 = dict(Nombre='Nuevo',
+             Dpi='1234',
+             Telefono='43234567',
+            _formname='registro')
+client.post('catedratico', data=data1)
+#fin de prueba unitaria Catedratico
+
+
+
+
+
 
 # logout
 client.get('user/logout')
