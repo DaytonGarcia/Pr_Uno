@@ -1,7 +1,7 @@
 ### we prepend t_ to tablenames and f_ to fieldnames for disambiguity
 db.define_table('Especializacion',
                 Field('id', 'id'),
-                Field('Detalle', type='string', label=T('NOMBRE')),
+                Field('Detalle', type='string', label=T('NOMBRE Especializacion')),
                 format='%(Detalle)s',
                 migrate=False)
 
